@@ -1,11 +1,31 @@
 {{ define "main" }}
 
   <!-- hero area -->
-  <section class="hero-area bg-primary overflow-hidden" id="parallax">
+  <section class="hero-area bg-orange overflow-hidden" id="parallax">
     <div class="container">
       <div class="row">
-        <div class="col-lg-11 mx-auto">
-          <h1 class="text-white font-tertiary">{{ .Site.Data.homepage.banner.title | safeHTML }}</h1>
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="text-white font-tertiary">{{ .Site.Data.homepage.banner.title | safeHTML }}</h1>
+       
+            <button type="button" class="btn btn-success btn-lg btn-block mt-3 mb-3">WhatsApp 0811-1801-100</button>
+
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto">
+          <div class="device-container">
+            <div class="device-mockup iphone6_plus portrait white">
+              <div class="device">
+                <div class="screen">
+                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                  <img src="http://amidiswater.com/wp-content/uploads/2019/10/main-slider7-1.png" class="img-fluid" alt="" style="position: relative; z-index:2;">
+                </div>
+                <div class="button">
+                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,13 +56,13 @@
     <div class="layer" id="l9">
       <img src="{{`images/illustrations/leaf-cyan-2.svg` | relURL}}" alt="bg-shape">
     </div>
-    <!-- social icon -->
+    <!-- social icon 
     <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
       {{ range .Site.Params.social }}
       <li class="mb-3"><a class="text-white" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
       {{ end }}
     </ul>
-    <!-- /social icon -->
+     /social icon -->
   </section>
   <!-- /hero area -->
 
@@ -213,6 +233,8 @@
   {{ end }}
 
 
+
+  
   {{ if .Site.Data.homepage.testimonial.enable }}
   {{ with .Site.Data.homepage.testimonial }}
   <!-- testimonial -->

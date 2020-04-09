@@ -12,6 +12,10 @@ VERSION: Versoin Number
   font-display: swap
 }
 
+.bg-orange{
+background-color:#e64028;
+}
+
 body {
   line-height: 1.2;
   font-family: roboto, sans-serif;
@@ -41,14 +45,14 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 80px
+  font-size: 65px
 }
 
 @media(max-width:991px) {
 
   h1,
   .h1 {
-    font-size: 65px
+    font-size: 50px;text-align:center;
   }
 }
 
@@ -87,7 +91,6 @@ h6,
 
 .btn {
   font-size: 22px;
-  font-family: playfair display, serif;
   text-transform: capitalize;
   padding: 16px 44px;
   border-radius: 5px;
@@ -424,8 +427,13 @@ textarea.form-control {
 
 .navigation.nav-bg {
   background-color: var(--primary-color);
-  padding: 15px 100px
+  padding: 0px 100px;    box-shadow: 0 0 7px rgba(0,0,0,.1)!important;
 }
+
+.navigation.nav-bg img {
+	width:70px!important;
+}
+
 
 @media(max-width:991px) {
   .navigation.nav-bg {
@@ -455,7 +463,7 @@ textarea.form-control {
 }
 
 .hero-area {
-  padding: 250px 0 200px;
+  padding: 160px 0 200px;
   position: relative
 }
 
