@@ -119,14 +119,16 @@
   {{ if .Site.Data.homepage.experience.enable }}
   {{ with .Site.Data.homepage.experience }}
   <!-- experience -->
-  <section class="section">
+
+
+  <section class="section bg-primary position-relative testimonial-bg-shapes">
     <div class="container">
       <div class="row justify-content-around">
         <div class="col-lg-12 text-center">
           <h2 class="section-title">{{ .title | markdownify }}</h2>
         </div>
         {{ range .item }}
-        <div class="col-lg-3 col-md-4 text-center">
+        <div class="col-lg-2 col-md-4 text-center">
           <img src="{{.logo | relURL }}" alt="icon">
           <p class="mb-0">{{.duration}}</p>
           <h4>{{.title }}</h4>
@@ -135,7 +137,15 @@
         {{ end }}
       </div>
     </div>
+    <!-- bg shapes -->
+    <img src="{{`images/backgrounds/map.png` | relURL }}" alt="map" class="img-fluid bg-map">
+    <img src="{{`images/illustrations/dots-group-v.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-1">
+    <img src="{{`images/illustrations/leaf-orange.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-2">
+    <img src="{{`images/illustrations/dots-group-sm.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-3">
+    <img src="{{`images/illustrations/leaf-pink-round.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-4">
+    <img src="{{`images/illustrations/leaf-cyan.svg` | relURL }}" alt="bg-shape" class="img-fluid bg-shape-5">
   </section>
+  
   <!-- /experience -->
   {{ end }}
   {{ end }}
@@ -186,7 +196,7 @@
         <div class="col-md-4 mb-4">
           <div class="card {{if .highlighted }} active-bg-primary {{end}} hover-shadow shadow">
             <div class="card-body text-center px-4 py-5">
-              <i class="{{.icon }} icon mb-5 d-inline-block"></i>
+              <img src="{{.icon | relURL }}" alt="icon">
               <h4 class="mb-4">{{.title}}</h4>
               <p>{{.content | markdownify}}</p>
             </div>
