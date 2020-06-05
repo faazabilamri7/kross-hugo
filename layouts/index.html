@@ -213,7 +213,7 @@
 
   {{ if .Site.Data.homepage.portfolio.enable }}
   <!-- portfolio -->
-  <section class="section">
+  <section class="section pt-0 pb-0">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -236,6 +236,11 @@
           </div>
         </div>
         {{ end }}
+      </div>
+      <div class="row pt-5">
+        <div class="col-12 text-center">
+          <h3 class="section-title">Menerima order pasokan rutin untuk kebutuhan Rumah, Acara, Toko, dan lain-lain di wilayah Tangerang Selatan dan sekitarnya</h3>
+        </div>
       </div>
     </div>
   </section>
@@ -283,7 +288,7 @@
 
   {{ if .Site.Data.homepage.clients_logo_slider.enable }}
   <!-- client logo slider -->
-  <section class="section pb-0">
+  <section class="section pb-0 pt-2">
     <div class="container">
       {{ partial "client-slider.html" . }}
     </div>
